@@ -2,12 +2,25 @@ html, body {
     height: 100%;
 }
 
+html {
+    opacity: 0;
+    -webkit-transition: opacity 500ms linear;
+    -moz-transition: opacity 500ms linear;
+    -o-transition: opacity 500ms linear;
+    transition: opacity 500ms linear;
+}
+
+html.ready {
+    opacity: 1;
+}
+
 body {
     background: url('../img/background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
 }
 
 body, h1, h2, h3, h4, h5, h6 {
