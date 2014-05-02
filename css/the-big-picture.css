@@ -1,0 +1,104 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: url('../img/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.shade {
+    background-color    : rgba(0, 0, 0, 0.5);
+    position            : fixed;
+    top                 : 0;
+    left                : 0;
+    bottom              : 0;
+    right               : 0;
+}
+
+.main {
+    color               : #f8f8f8;
+    padding-top         : 50px;
+}
+
+#intro {
+    text-align          : center;
+}
+
+h1 {
+    text-align          : center;
+}
+
+hr.divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    font-size: 16px;
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+
+    hr.divider {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+
+img.logo {
+    margin: 0 auto;
+}
+
+.item {
+    height: 440px;
+}
+
+.lead {
+    font-weight: 300;
+}
+
+.lead a,
+.lead a:hover {
+    color: rgb(255, 255, 153);
+}
