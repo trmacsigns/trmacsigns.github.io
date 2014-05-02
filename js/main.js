@@ -9,7 +9,7 @@
         padding = Math.max(padding, 50)
 
         $('.main').css({
-            'padding-top'       : Math.max(padding, 50)
+            'padding-top': Math.max(padding, 50)
         });
 
     };
