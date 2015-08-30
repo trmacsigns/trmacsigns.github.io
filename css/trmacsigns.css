@@ -1,117 +1,171 @@
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 html {
-    opacity: 0;
-    -webkit-transition: opacity 200ms ease;
-    -moz-transition: opacity 200ms ease;
-    -o-transition: opacity 200ms ease;
-    transition: opacity 200ms ease;
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
 }
 
 html.ready {
-    opacity: 1;
+  opacity: 1;
 }
 
 body {
-    background: url('../img/background.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
+  background: url('../img/background-blur.jpg') no-repeat fixed;
+  background-position-y: center;
+  -webkit-background-size: 110%;
+  -moz-background-size: 110%;
+  -o-background-size: 110%;
+  background-size: 110%;
+  transition: background 0.75s ease;
 }
 
-body, h1, h2, h3, h4, h5, h6 {
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
+body.slide0 {
+  background-position-x: 0;
+}
+
+body.slide1 {
+  background-position-x: 50%;
+}
+
+body.slide2 {
+  background-position-x: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
 .shade {
-    background-color    : rgba(0, 0, 0, 0.5);
-    position            : fixed;
-    top                 : 0;
-    left                : 0;
-    bottom              : 0;
-    right               : 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .main {
-    color               : #f8f8f8;
-    padding-top         : 50px;
+  color: #f8f8f8;
+  padding-top: 50px;
+}
+
+.card {
+  border: 1px solid white;
+  padding: 0 15px;
+  /*border-top-width: 8px;*/
 }
 
 #intro {
-    text-align          : center;
+  text-align: center;
 }
 
 h1 {
-    text-align          : center;
+  text-align: center;
 }
 
 hr.divider {
-    width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand {
-    font-size: 16px;
-    padding: 20px;
+  font-size: 16px;
+  padding: 20px;
 }
 
-@media (max-width: 767px) {
+.navbar-brand.active div {
+  color: white;
+  padding-bottom: 4px;
+  border-bottom: 1px solid white;
+}
 
-    hr.divider {
-        width: 100%;
-    }
+.btn-hollow {
+  background: transparent;
+  border-color: white;
+  color: white;
+}
 
-    .navbar-brand {
-        font-size: 14px;
-        padding: 15px;
-    }
-
-    ul.intro-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
+.btn-hollow:hover,
+.btn-hollow:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .network-name {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 footer {
-    background-color: #f8f8f8;
-    padding: 50px 0;
+  background-color: #f8f8f8;
+  padding: 50px 0;
 }
 
 p.copyright {
-    margin: 15px 0 0;
+  margin: 15px 0 0;
 }
 
 img.logo {
-    margin: 0 auto;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .item {
-    height: 440px;
 }
 
 .lead {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .lead a,
 .lead a:hover {
-    color: rgb(255, 255, 153);
+  color: rgb(255, 255, 153);
+}
+
+#contact .lead {
+  margin-left: 50px;
+}
+
+@media (max-width: 767px) {
+  body {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  hr.divider {
+    width: 100%;
+  }
+  .navbar-brand {
+    font-size: 14px;
+    padding: 15px;
+  }
+  ul.intro-social-buttons > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  ul.intro-social-buttons > li:last-child {
+    margin-bottom: 0;
+  }
+  #contact .lead {
+    margin-left: 0;
+  }
 }
